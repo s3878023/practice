@@ -1,0 +1,21 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+   <bean id = "chatApplication" class = "com.tutorial5.practice.ChatApplication">
+      <property name="service" ref="facebookService"/>
+   </bean>
+   
+   <bean id = "facebookService" class = "com.tutorial5.practice.FacebookService" scope="prototype">
+   </bean>
+  
+   <bean id = "smsService" class = "com.tutorial5.practice.SMSService">
+   </bean>
+   
+   <bean id = "hangoutService" class = "com.tutorial5.practice.HangoutService">
+   </bean>
+
+</beans>
